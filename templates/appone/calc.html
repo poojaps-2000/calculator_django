@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block bb %}
+    <style>
+        body { padding-top: 70px;
+             }
+        .jumbotron,.container
+        {
+            background-color:#3253;
+            color:#0e0d2e;
+            text-align: center;
+            margin-top: 5%;
+        }
+          
+        </style>
+
+    <div class='row'>
+    <div class="col-sm-6 offset-sm-3 align-items-center col-md-6">
+        <div class="form-group container jumbotron">
+            <h1>{{result}}</h1>
+            <h1>{{error}}</h1>
+                <form method='POST'>
+                    {% csrf_token %}
+                    NUM1
+                    <input class="form-control" type="number" name='num1' placeholder="first number" required>
+                    NUM2
+                    <input class="form-control" type="number" name='num2' placeholder="second number" required>
+                    <br>
+                    <select class="btn btn-info" name='op'>
+                        <option>SELECT OPERATION</option>
+                        <option>+</option>
+                        <option>-</option>
+                        <option>*</option>
+                        <option>/</option>
+                        <option>%</option>
+                        <option>**</option>
+                        
+                    </select>
+                    <br><br>
+                    <input class="btn btn-success" type="submit" name="SUBMIT">
+                </form>
+    </div>
+    </div>
+    </div>  
+{% endblock %}

@@ -10,9 +10,27 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container jumbotron">
-        <h1>THIS IS FROM BASE</h1>
-    </div>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav navbar-brand navbar-brand">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'appone:calc' %}">CALCULATOR</a>
+                </li>
+                <li>
+                </li>
+            </ul>
+
+          </div>
+        
+    </nav>
+
     {% block bb %}
     {% endblock %}
 </body>

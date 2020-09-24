@@ -1,12 +1,23 @@
 {% extends 'base.html' %}
 {% block bb %}
-    <div class="container jumbotron">
-        <h2>THIS IS INDEX</h2>
-            <a href="{% url 'home' %}">HOME</a>
-
-            <a href="{% url 'appone:entry' %}">ENTRY</a>
-
-
+        <style>
+        body { padding-top: 70px; 
+        }
+        .jumbotron,.container
+        {
+            background-color:#3253;
+            color:#0e0d2e;
+            text-align: center;
+            padding-top:15%;
+        }
+          
+        </style>
+   <br><br>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>WELCOME TO MY CALCULATOR</h1>
+        </div>
     </div>
+
 
 {% endblock %}
