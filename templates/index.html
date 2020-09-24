@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block bb %}
+    <div class="container jumbotron">
+        <h2>THIS IS INDEX</h2>
+            <a href="{% url 'home' %}">HOME</a>
+
+            <a href="{% url 'appone:entry' %}">ENTRY</a>
+
+
+    </div>
+
+{% endblock %}
